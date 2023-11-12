@@ -13,8 +13,7 @@ def test_output_subprocess():
 
 def test_capsys_out(capsys):
     # print("output")
-    # sys.stdout.write("output")
-    sys.stderr.write("output")
+    sys.stdout.write("output")
     output = capsys.readouterr().out.rstrip()
     assert output == "output"
 
